@@ -3,7 +3,6 @@ import VueRouter from "vue-router";
 import App from './App.vue'
 import AppProducts from './components/AppProducts.vue'
 import AppCustomers from './components/AppCustomers.vue'
-
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
