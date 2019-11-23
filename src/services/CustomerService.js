@@ -3,19 +3,19 @@ const customers = [
       id: 1,
       fullName: "Mario Speedwagon",
       email: "example@example.com",
-      products: []
+      products: ['Golf II', '100l rakija']
     },
     {
       id: 2,
       fullName: "Petey Cruiser",
       email: "example@example.com",
-      products: []
+      products: ['Apple iMac']
     },
     {
       id: 3,
       fullName: "Anna Sthesia",
       email: "example@example.com",
-      products: []
+      products: ['Thing']
     }
   ];
   

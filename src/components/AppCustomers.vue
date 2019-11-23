@@ -5,6 +5,7 @@
         <li>ID: {{ customer.id}}<br>
             Name: {{ customer.fullName }}<br>
             Email adress: {{ customer.email }}<br>
+            <router-link :to="'customer/'+customer.id">Latest purchases </router-link>
             <button @click="removeCustomer(customer)">Remove customer</button>
         </li>
     </ul>
