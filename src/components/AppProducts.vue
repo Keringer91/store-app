@@ -10,7 +10,9 @@
         <li>
             ID: {{ product.id}}<br>
             Title: {{ product.name }}<br>
-            Quantity: {{ product.quantity }}<br>            
+            Quantity: {{ product.quantity }}<br>   
+            <button @click="incrementQuantity(product)"> + </button>         
+            <button @click="decrementQuantity(product)"> - </button>         
         </li>
     </ul>
   </div>
@@ -19,20 +21,29 @@
 <script>
 import { productService } from '../services/ProductService'
 export default {
-  data () {
-    return {
-        search: '',
-        products: [],
-    }
-   },
+    data () {
+        return {
+            search: '',
+            products: [],
+        }
+    },
+    methods: {
+        incrementQuantity(product) {
+            productService.increment(product)
+        },
+        decrementQuantity(product) {
+            productService.decrement(product)
+        }
+    },
 
-   created() {
-     this.products = productService.list()
-   },
-   computed: {
-    filteredList() {
-      return this.products.filter(product => {
-        return product.name.toLowerCase().includes(this.search.toLowerCase())
+    created() {
+        this.products = productService.list()
+    },
+
+    computed: {
+        filteredList() {
+            return this.products.filter(product => {
+            return product.name.toLowerCase().includes(this.search.toLowerCase())
       })
     }
   }
