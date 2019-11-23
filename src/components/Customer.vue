@@ -7,7 +7,8 @@
 
       <ul v-for="(product, index) in products" :key="index">
         <li>
-          Product {{ index + 1 }}: {{ product }}<br> 
+          Article {{ index + 1 }}: {{ product.name }}<br>
+          Quantity: {{ product.quantity }}<br> 
         </li>
     </ul>
 

@@ -12,7 +12,8 @@
             Title: {{ product.name }}<br>
             Quantity: {{ product.quantity }}<br>   
             <button @click="incrementQuantity(product)"> + </button>         
-            <button @click="decrementQuantity(product)"> - </button>         
+            <button @click="decrementQuantity(product)"> - </button>
+            <router-link :to="'product/'+product.id+'/'+product.quantity"> Buy </router-link>      
         </li>
     </ul>
   </div>
